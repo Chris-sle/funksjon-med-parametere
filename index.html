@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funksjon med parametere</title>
+    <style>
+    </style>
+</head>
+<!--Oppgave - funksjon med parametere 
+    Lag en funksjon som kan endre både tekst, farge og størrelse 
+    til en div. Legg til 2 knapper som trigger funksjonen med 
+    forskjellige verdier -->
+<body>
+    <div class="container">
+        <div>
+            <button onclick="change('black', 'white', 200, 100, 40, 'dette er en ny tekst!')">Change 1</button>
+            <button onclick="change('pink', 'indigo', 300, 200, 50, 'og dette er en annen ny tekst!')">Change 2</button>
+        </div>
+        <div id="myDiv">Dette er noe tekst</div>
+    </div>
+</body>
+<Script>
+    function change(BGcolor, color, width, height, fontsize, text) {
+        document.getElementById('myDiv').innerHTML = /*html*/ `
+            <div style="
+            background-color:${BGcolor};
+            color:${color};  
+            width:${width}px; 
+            height:${height}px;
+            font-size:${fontsize}px ">
+            ${text}
+            </div>
+        `;
+    }
+</SCript>
+</html>
